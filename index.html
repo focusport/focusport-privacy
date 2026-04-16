@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FocusPort – Privacy Policy & Terms of Service</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f0f13;
+      color: #e0e0e8;
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      border-bottom: 1px solid #2a2a4a;
+      padding: 40px 24px 32px;
+      text-align: center;
+    }
+
+    .app-icon {
+      width: 72px;
+      height: 72px;
+      background: linear-gradient(135deg, #4f6ef7, #7c3aed);
+      border-radius: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      margin-bottom: 16px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+    }
+
+    header .tagline {
+      color: #818cf8;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    header p {
+      color: #8888aa;
+      margin-top: 8px;
+      font-size: 14px;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 20px 24px 0;
+      background: #0f0f13;
+      border-bottom: 1px solid #1e1e30;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .tab {
+      padding: 10px 28px;
+      border-radius: 8px 8px 0 0;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      border-bottom: none;
+      color: #8888aa;
+      background: transparent;
+      transition: all 0.2s;
+    }
+
+    .tab.active {
+      background: #1a1a2e;
+      color: #ffffff;
+      border-color: #2a2a4a;
+    }
+
+    .content {
+      display: none;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .content.active { display: block; }
+
+    .last-updated {
+      background: #1a1a2e;
+      border: 1px solid #2a2a4a;
+      border-radius: 10px;
+      padding: 14px 18px;
+      font-size: 13px;
+      color: #6666aa;
+      margin-bottom: 36px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .last-updated span { color: #9999cc; font-weight: 600; }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 36px 0 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #1e1e30;
+    }
+
+    h2:first-of-type { margin-top: 0; }
+
+    p { color: #b0b0cc; margin-bottom: 12px; }
+
+    ul {
+      list-style: none;
+      margin: 0 0 16px;
+      padding: 0;
+    }
+
+    ul li {
+      color: #b0b0cc;
+      padding: 5px 0 5px 22px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: "›";
+      position: absolute;
+      left: 0;
+      color: #4f6ef7;
+      font-weight: 700;
+    }
+
+    .card {
+      background: #1a1a2e;
+      border: 1px solid #2a2a4a;
+      border-radius: 12px;
+      padding: 20px 22px;
+      margin: 16px 0;
+    }
+
+    .card-title {
+      font-weight: 700;
+      color: #ffffff;
+      font-size: 15px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .badge {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 20px;
+      letter-spacing: 0.4px;
+    }
+
+    .badge-green { background: #0d2e1a; color: #4ade80; border: 1px solid #166534; }
+    .badge-blue  { background: #0d1e3a; color: #60a5fa; border: 1px solid #1e40af; }
+    .badge-amber { background: #2e1e00; color: #fbbf24; border: 1px solid #92400e; }
+
+    .highlight-box {
+      background: #0d2e1a;
+      border: 1px solid #166534;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 20px 0;
+      color: #86efac;
+      font-size: 14px;
+    }
+
+    .highlight-box strong { color: #4ade80; }
+
+    .warning-box {
+      background: #1e1200;
+      border: 1px solid #78350f;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 20px 0;
+      color: #fde68a;
+      font-size: 14px;
+    }
+
+    a { color: #818cf8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .contact-box {
+      background: #16213e;
+      border: 1px solid #2a2a4a;
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .contact-box p { margin-bottom: 4px; }
+    .contact-box a { font-size: 18px; font-weight: 700; color: #818cf8; }
+
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      color: #44445a;
+      font-size: 13px;
+      border-top: 1px solid #1e1e30;
+    }
+
+    @media (max-width: 500px) {
+      .tab { padding: 10px 16px; font-size: 13px; }
+      header h1 { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="app-icon">🎯</div>
+  <h1>FocusPort</h1>
+  <div class="tagline">Block Distractions. Enter Deep Work.</div>
+  <p>Legal Documents — Privacy Policy &amp; Terms of Service</p>
+</header>
+
+<div class="tabs">
+  <button class="tab active" onclick="showTab('privacy', this)">Privacy Policy</button>
+  <button class="tab" onclick="showTab('terms', this)">Terms of Service</button>
+</div>
+
+<!-- ===================== PRIVACY POLICY ===================== -->
+<div id="privacy" class="content active">
+
+  <div class="last-updated">
+    📅 Last updated: <span>April 17, 2026</span> &nbsp;|&nbsp; Applies to FocusPort for Android
+  </div>
+
+  <h2>1. Overview</h2>
+  <p>FocusPort ("we", "our", or "the app") is a focus and productivity app built for Android. This Privacy Policy explains what data we collect, why we collect it, and how it is stored and protected. We are committed to being fully transparent about our data practices.</p>
+
+  <div class="highlight-box">
+    <strong>🛡️ Guest Mode:</strong> If you use FocusPort as a guest (without signing in), no data ever leaves your device. All session data is stored locally in your phone's private app storage only.
+  </div>
+
+  <h2>2. What Data We Collect</h2>
+  <p>The data we collect depends on whether you use the app as a guest or sign in with Google.</p>
+
+  <div class="card">
+    <div class="card-title">👤 Guest Users <span class="badge badge-green">ON-DEVICE ONLY</span></div>
+    <ul>
+      <li>Focus session history (duration, completion status, timestamps)</li>
+      <li>Current streak and best streak count</li>
+      <li>Emergency app preferences</li>
+      <li>App settings (dark mode, scheduled programs)</li>
+    </ul>
+    <p style="margin-top:10px; font-size:14px; color:#6666aa;">None of this data leaves your device. It is stored in Android SharedPreferences, private to this app only.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🔑 Signed-In Users (Google Account) <span class="badge badge-blue">SYNCED TO CLOUD</span></div>
+    <ul>
+      <li>Your Google Account display name and anonymous Firebase UID</li>
+      <li>Focus session records (start time, duration, completion status)</li>
+      <li>Streak count and best streak</li>
+      <li>Total sessions completed and total focus minutes</li>
+      <li>Exit key balance (number of keys available)</li>
+      <li>Last completed session date</li>
+      <li>Premium status and trial expiry timestamp</li>
+      <li>Migration flags (internal — whether guest data has been transferred to your account)</li>
+    </ul>
+    <p style="margin-top:10px; font-size:14px; color:#6666aa;">This data is stored in <strong style="color:#9999cc;">Google Firebase Firestore</strong>, a secure cloud database by Google LLC, linked to your anonymous Firebase UID — not your email address.</p>
+  </div>
+
+  <h2>3. What We Do NOT Collect</h2>
+  <ul>
+    <li>We do not collect your email address</li>
+    <li>We do not collect your phone number</li>
+    <li>We do not collect your location</li>
+    <li>We do not collect your contacts</li>
+    <li>We do not store or transmit information about the apps you use</li>
+    <li>We do not read or record the content displayed on your screen</li>
+    <li>We do not serve advertisements</li>
+    <li>We do not sell any data to any third party, ever</li>
+  </ul>
+
+  <h2>4. How We Use the Accessibility Service</h2>
+  <div class="warning-box">
+    ⚠️ FocusPort uses Android's Accessibility Service <strong>only</strong> to detect when you leave the app during an active focus session, and to help enforce your focus session by restricting distractions — a session you have personally configured and started.
+  </div>
+  <p>The Accessibility Service is used strictly for this single purpose. It does not read text from your screen, interact with other apps on your behalf, collect or store any data from other apps, or operate when no focus session is active. You can revoke this permission at any time via Android Settings → Accessibility.</p>
+
+  <h2>5. How We Use Device Administrator</h2>
+  <p>FocusPort requests Device Administrator permission solely to lock the screen during active focus sessions initiated by the user. It is not used to wipe your device, enforce password policies, monitor device usage, or perform any action outside of an active, user-initiated focus session.</p>
+
+  <h2>6. Exit Keys — In-App Purchases</h2>
+  <p>FocusPort offers "Exit Keys" as consumable in-app items. Users can always choose to end a session at any time, which may result in loss of streak progress. Exit Keys allow you to do this without losing your streak.</p>
+  <ul>
+    <li>Your first Exit Key is granted free after completing your first focus session</li>
+    <li>Additional keys are available for purchase via Google Play Billing</li>
+    <li>Your key balance is stored in Firebase (signed-in) or locally (guest)</li>
+    <li>Purchase transactions are handled entirely by Google Play — we never see or store your payment information</li>
+  </ul>
+
+  <h2>7. Third-Party Services</h2>
+  <div class="card">
+    <div class="card-title">Google Firebase (Firestore &amp; Authentication)</div>
+    <p style="font-size:14px; color:#8888aa; margin:0;">Used for cloud data storage and Google Sign-In. Governed by the <a href="https://firebase.google.com/support/privacy" target="_blank">Google Firebase Privacy Policy</a>.</p>
+  </div>
+  <div class="card">
+    <div class="card-title">Google Play Billing</div>
+    <p style="font-size:14px; color:#8888aa; margin:0;">Used to process Exit Key purchases. Governed by the <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice" target="_blank">Google Payments Privacy Notice</a>.</p>
+  </div>
+
+  <h2>8. Data Retention</h2>
+  <p>Your data is retained for as long as your account is active. If you delete your account from within the app (Settings → Delete Account), all your data is permanently deleted from Firebase within 30 days.</p>
+
+  <h2>9. Your Rights</h2>
+  <ul>
+    <li><strong style="color:#c0c0e0;">Access:</strong> View all your data in the Tracking tab of the app</li>
+    <li><strong style="color:#c0c0e0;">Delete:</strong> Delete your account and all associated data from Settings → Delete Account</li>
+    <li><strong style="color:#c0c0e0;">Portability:</strong> Contact us and we will provide your data in JSON format</li>
+    <li><strong style="color:#c0c0e0;">Revoke permissions:</strong> Revoke Accessibility or Device Admin permissions at any time from Android Settings</li>
+  </ul>
+
+  <h2>10. Children's Privacy</h2>
+  <p>FocusPort is not directed at children under the age of 13. We do not knowingly collect personal data from children. If you believe a child has provided us with data, please contact us and we will delete it immediately.</p>
+
+  <h2>11. Changes to This Policy</h2>
+  <p>If we make significant changes to this Privacy Policy, we will notify you via an in-app notice. The "Last Updated" date at the top of this page will always reflect the most recent version.</p>
+
+  <div class="contact-box">
+    <p style="color:#6666aa; font-size:14px; margin-bottom: 8px;">Questions about your privacy?</p>
+    <a href="mailto:support@focusport.app">support@focusport.app</a>
+    <p style="color:#44445a; font-size:13px; margin-top:10px;">We aim to respond within 48 hours.</p>
+  </div>
+
+</div>
+
+<!-- ===================== TERMS OF SERVICE ===================== -->
+<div id="terms" class="content">
+
+  <div class="last-updated">
+    📅 Last updated: <span>April 17, 2026</span> &nbsp;|&nbsp; Applies to FocusPort for Android
+  </div>
+
+  <h2>1. Acceptance of Terms</h2>
+  <p>By downloading, installing, or using FocusPort ("the App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use the App. These Terms apply to all users, including guests and registered users.</p>
+
+  <h2>2. Description of the App</h2>
+  <p>FocusPort is a focus and productivity application that helps users maintain concentration by restricting access to other apps and device functions during user-configured focus sessions. The App uses Android's Accessibility Service, Device Administrator, and related system features strictly for this purpose, and only during sessions that the user themselves initiates.</p>
+
+  <h2>3. User Accounts</h2>
+  <ul>
+    <li>You may use the App as a guest without creating an account</li>
+    <li>You may sign in with your Google Account to sync data across devices</li>
+    <li>You are responsible for maintaining the security of your Google Account</li>
+    <li>We reserve the right to suspend accounts that violate these Terms</li>
+  </ul>
+
+  <h2>4. Exit Keys — Purchases &amp; Refunds</h2>
+  <div class="card">
+    <div class="card-title">Free Key <span class="badge badge-green">FREE</span></div>
+    <p style="font-size:14px; color:#8888aa; margin:0;">Every user receives one (1) free Exit Key automatically after completing their first focus session. Users can always choose to end a session at any time, which may result in loss of streak progress. An Exit Key allows you to exit early without that penalty.</p>
+  </div>
+  <div class="card">
+    <div class="card-title">Additional Keys <span class="badge badge-amber">PAID</span></div>
+    <p style="font-size:14px; color:#8888aa; margin:0;">Additional Exit Keys are available for purchase through Google Play. All purchases are final and non-refundable once a key has been consumed. Unused keys may be eligible for a refund through Google Play's standard refund policy within 48 hours of purchase.</p>
+  </div>
+  <p>Exit Keys are consumable items. They are not transferable between accounts and their value cannot be redeemed for cash. We reserve the right to adjust pricing at any time; previously purchased keys are not affected.</p>
+
+  <h2>5. Premium Features</h2>
+  <p>Certain features are available only to Premium subscribers, including additional schedule slots and emergency app slots. Premium status is obtained through in-app purchase via Google Play Billing. We will provide notice of any material reductions to premium features.</p>
+
+  <h2>6. Acceptable Use</h2>
+  <p>You agree not to:</p>
+  <ul>
+    <li>Attempt to bypass, reverse-engineer, or disable the session enforcement mechanisms of the App</li>
+    <li>Use the App in any way that violates applicable laws or regulations</li>
+    <li>Share, sell, or transfer your account or Exit Keys to another person</li>
+    <li>Use automated scripts or tools to interact with the App</li>
+    <li>Attempt to gain unauthorised access to our Firebase database or backend systems</li>
+  </ul>
+
+  <h2>7. Permissions Disclosure</h2>
+  <p>The App requires the following system permissions to function. By enabling these, you consent to their use as described:</p>
+  <ul>
+    <li><strong style="color:#c0c0e0;">Accessibility Service:</strong> Detects when you leave the app during a session and helps enforce your focus session by restricting distractions — only during active, user-initiated sessions</li>
+    <li><strong style="color:#c0c0e0;">Device Administrator:</strong> Locks the device screen during active focus sessions initiated by the user</li>
+    <li><strong style="color:#c0c0e0;">Display Over Other Apps:</strong> Shows a warning overlay if accessibility is disabled mid-session</li>
+    <li><strong style="color:#c0c0e0;">Exact Alarms:</strong> Triggers scheduled focus sessions at the precise time you set</li>
+    <li><strong style="color:#c0c0e0;">Notifications:</strong> Delivers session start and status notifications on Android 13+</li>
+  </ul>
+  <p>All permissions can be revoked at any time from Android Settings. Revoking core permissions will disable related functionality.</p>
+
+  <h2>8. Disclaimer of Warranties</h2>
+  <p>The App is provided "as is" without warranties of any kind. We do not guarantee the App will be available at all times or error-free. Productivity outcomes vary by individual, and we make no guarantees regarding the effectiveness of focus sessions for any particular user.</p>
+
+  <h2>9. Limitation of Liability</h2>
+  <p>To the maximum extent permitted by law, FocusPort and its developers shall not be liable for any indirect, incidental, or consequential damages arising from your use of the App, including but not limited to loss of data, missed notifications, or device functionality issues resulting from the use of system-level permissions.</p>
+
+  <h2>10. Termination</h2>
+  <p>You may stop using the App and delete your account at any time via Settings → Delete Account. We may terminate or suspend your access if you violate these Terms. Upon termination, your right to use the App ceases and we will delete your data per our Privacy Policy.</p>
+
+  <h2>11. Changes to Terms</h2>
+  <p>We may update these Terms from time to time. If changes are material, we will notify you via an in-app notice. Continued use of the App after such notice constitutes acceptance of the updated Terms.</p>
+
+  <h2>12. Governing Law</h2>
+  <p>These Terms are governed by the laws of India. Any disputes arising from these Terms or the use of the App shall be subject to the jurisdiction of courts in Kerala, India.</p>
+
+  <div class="contact-box">
+    <p style="color:#6666aa; font-size:14px; margin-bottom: 8px;">Questions about these Terms?</p>
+    <a href="mailto:support@focusport.app">support@focusport.app</a>
+    <p style="color:#44445a; font-size:13px; margin-top:10px;">We aim to respond within 48 hours.</p>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 FocusPort. All rights reserved. &nbsp;|&nbsp; Made in Kerala, India 🇮🇳
+</footer>
+
+<script>
+  function showTab(tabId, el) {
+    document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.getElementById(tabId).classList.add('active');
+    el.classList.add('active');
+  }
+</script>
+
+</body>
+</html>
