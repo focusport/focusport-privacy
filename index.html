@@ -23,15 +23,20 @@
     }
 
     .app-icon {
-      width: 72px;
-      height: 72px;
-      background: linear-gradient(135deg, #4f6ef7, #7c3aed);
-      border-radius: 18px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 36px;
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
+      display: inline-block;
       margin-bottom: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(79,110,247,0.3);
+    }
+
+    .app-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     header h1 {
@@ -196,6 +201,18 @@
       font-size: 14px;
     }
 
+    .info-box {
+      background: #0d1e3a;
+      border: 1px solid #1e40af;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 20px 0;
+      color: #bfdbfe;
+      font-size: 14px;
+    }
+
+    .info-box strong { color: #60a5fa; }
+
     a { color: #818cf8; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
@@ -203,13 +220,36 @@
       background: #16213e;
       border: 1px solid #2a2a4a;
       border-radius: 12px;
-      padding: 24px;
+      padding: 28px 24px;
       margin-top: 40px;
       text-align: center;
     }
 
-    .contact-box p { margin-bottom: 4px; }
-    .contact-box a { font-size: 18px; font-weight: 700; color: #818cf8; }
+    .contact-box .label {
+      color: #6666aa;
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+
+    .contact-box a {
+      font-size: 17px;
+      font-weight: 700;
+      color: #818cf8;
+      display: block;
+      margin-bottom: 18px;
+    }
+
+    .contact-box .divider {
+      border: none;
+      border-top: 1px solid #2a2a4a;
+      margin: 16px 0;
+    }
+
+    .contact-box .response {
+      color: #44445a;
+      font-size: 13px;
+      margin-top: 6px;
+    }
 
     footer {
       text-align: center;
@@ -228,7 +268,9 @@
 <body>
 
 <header>
-  <div class="app-icon">🎯</div>
+  <div class="app-icon">
+    <img src="app-fp-logo.png" alt="FocusPort Logo" />
+  </div>
   <h1>FocusPort</h1>
   <div class="tagline">Block Distractions. Enter Deep Work.</div>
   <p>Legal Documents — Privacy Policy &amp; Terms of Service</p>
@@ -304,7 +346,7 @@
   <p>FocusPort requests Device Administrator permission solely to lock the screen during active focus sessions initiated by the user. It is not used to wipe your device, enforce password policies, monitor device usage, or perform any action outside of an active, user-initiated focus session.</p>
 
   <h2>6. Exit Keys — In-App Purchases</h2>
-  <p>FocusPort offers "Exit Keys" as consumable in-app items. Users can always choose to end a session at any time, which may result in loss of streak progress. Exit Keys allow you to do this without losing your streak.</p>
+  <p>FocusPort offers "Exit Keys" as consumable in-app items. Users can always choose to end a session at any time, which may result in loss of streak progress. Exit Keys allow you to exit early without that penalty.</p>
   <ul>
     <li>Your first Exit Key is granted free after completing your first focus session</li>
     <li>Additional keys are available for purchase via Google Play Billing</li>
@@ -322,14 +364,17 @@
     <p style="font-size:14px; color:#8888aa; margin:0;">Used to process Exit Key purchases. Governed by the <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice" target="_blank">Google Payments Privacy Notice</a>.</p>
   </div>
 
-  <h2>8. Data Retention</h2>
-  <p>Your data is retained for as long as your account is active. If you delete your account from within the app (Settings → Delete Account), all your data is permanently deleted from Firebase within 30 days.</p>
+  <h2>8. Data Retention &amp; Deletion</h2>
+  <div class="info-box">
+    <strong>ℹ️ How to delete your data:</strong> Currently, FocusPort does not provide an in-app data deletion option. You may request deletion by contacting us at the email below. We will process valid requests within a reasonable timeframe.
+  </div>
+  <p>We retain your data (such as focus sessions, streaks, and account progress) while your account is active. This includes all data stored in Google Firebase Firestore linked to your account. Guest user data is stored only on your device and is permanently removed when you uninstall the app.</p>
 
   <h2>9. Your Rights</h2>
   <ul>
-    <li><strong style="color:#c0c0e0;">Access:</strong> View all your data in the Tracking tab of the app</li>
-    <li><strong style="color:#c0c0e0;">Delete:</strong> Delete your account and all associated data from Settings → Delete Account</li>
-    <li><strong style="color:#c0c0e0;">Portability:</strong> Contact us and we will provide your data in JSON format</li>
+    <li><strong style="color:#c0c0e0;">Access:</strong> View your session history and stats in the Tracking tab of the app</li>
+    <li><strong style="color:#c0c0e0;">Delete:</strong> Contact us at the email below to request deletion of all your account data</li>
+    <li><strong style="color:#c0c0e0;">Portability:</strong> Contact us and we will provide your data in JSON format on request</li>
     <li><strong style="color:#c0c0e0;">Revoke permissions:</strong> Revoke Accessibility or Device Admin permissions at any time from Android Settings</li>
   </ul>
 
@@ -340,9 +385,12 @@
   <p>If we make significant changes to this Privacy Policy, we will notify you via an in-app notice. The "Last Updated" date at the top of this page will always reflect the most recent version.</p>
 
   <div class="contact-box">
-    <p style="color:#6666aa; font-size:14px; margin-bottom: 8px;">Questions about your privacy?</p>
-    <a href="mailto:support@focusport.app">support@focusport.app</a>
-    <p style="color:#44445a; font-size:13px; margin-top:10px;">We aim to respond within 48 hours.</p>
+    <p class="label">General enquiries &amp; privacy questions</p>
+    <a href="mailto:anishkumar.app.dev@gmail.com">anishkumar.app.dev@gmail.com</a>
+    <hr class="divider" />
+    <p class="label">Data deletion requests</p>
+    <a href="mailto:anishkumar.app.dev@gmail.com?subject=Data%20Deletion%20Request%20-%20FocusPort">anishkumar.app.dev@gmail.com</a>
+    <p class="response">We aim to respond to all requests within 48 hours.</p>
   </div>
 
 </div>
@@ -410,7 +458,7 @@
   <p>To the maximum extent permitted by law, FocusPort and its developers shall not be liable for any indirect, incidental, or consequential damages arising from your use of the App, including but not limited to loss of data, missed notifications, or device functionality issues resulting from the use of system-level permissions.</p>
 
   <h2>10. Termination</h2>
-  <p>You may stop using the App and delete your account at any time via Settings → Delete Account. We may terminate or suspend your access if you violate these Terms. Upon termination, your right to use the App ceases and we will delete your data per our Privacy Policy.</p>
+  <p>You may stop using the App at any time by uninstalling it. To request deletion of your account data, contact us at the email below. We may terminate or suspend your access if you violate these Terms.</p>
 
   <h2>11. Changes to Terms</h2>
   <p>We may update these Terms from time to time. If changes are material, we will notify you via an in-app notice. Continued use of the App after such notice constitutes acceptance of the updated Terms.</p>
@@ -419,9 +467,12 @@
   <p>These Terms are governed by the laws of India. Any disputes arising from these Terms or the use of the App shall be subject to the jurisdiction of courts in Kerala, India.</p>
 
   <div class="contact-box">
-    <p style="color:#6666aa; font-size:14px; margin-bottom: 8px;">Questions about these Terms?</p>
-    <a href="mailto:support@focusport.app">support@focusport.app</a>
-    <p style="color:#44445a; font-size:13px; margin-top:10px;">We aim to respond within 48 hours.</p>
+    <p class="label">General enquiries &amp; support</p>
+    <a href="mailto:anishkumar.app.dev@gmail.com">anishkumar.app.dev@gmail.com</a>
+    <hr class="divider" />
+    <p class="label">Data deletion requests</p>
+    <a href="mailto:anishkumar.app.dev@gmail.com?subject=Data%20Deletion%20Request%20-%20FocusPort">anishkumar.app.dev@gmail.com</a>
+    <p class="response">We aim to respond to all requests within 48 hours.</p>
   </div>
 
 </div>
