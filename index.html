@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
   <title>FocusPort – Privacy Policy & Terms of Service</title>
   <meta name="description" content="FocusPort is a powerful focus app that blocks distractions and helps you build deep work habits. Download now on Google Play." />
   <style>
@@ -298,14 +298,14 @@
   </div>
 
   <h2>2. Information We Collect</h2>
-  <p>We may collect the following types of data:</p>
+  <p>We may collect the following types of data to provide and improve our services:</p>
   <ul>
-    <li><strong style="color:#c0c0e0;">Account Information:</strong> Name and email address (via Google Sign-In)</li>
-    <li><strong style="color:#c0c0e0;">Usage Data:</strong> Focus sessions, duration, completion status, streaks</li>
-    <li><strong style="color:#c0c0e0;">Device Information:</strong> Device model, OS version, and app usage logs for debugging and performance improvements.</li>
+    <li><strong style="color:#c0c0e0;">Account Information:</strong> Name, email address, and a unique Firebase user ID (via Google Sign-In).</li>
+    <li><strong style="color:#c0c0e0;">Usage Data:</strong> Focus sessions, duration, completion status, streaks, and total focus minutes.</li>
+    <li><strong style="color:#c0c0e0;">Device Information:</strong> Limited device information such as device model, operating system version, and diagnostic data (e.g., crash logs) through Firebase services to improve app performance and stability.</li>
     <li><strong style="color:#c0c0e0;">Log Data:</strong> In case of app errors, we may collect diagnostic information such as crash logs to improve stability.</li>
   </ul>
-  <p>We do not collect sensitive personal data such as passwords or financial information.</p>
+  <p>We do not collect sensitive personal data such as passwords or financial information directly through our app.</p>
 
   <div class="card">
     <div class="card-title">👤 Guest Users <span class="badge badge-green">ON-DEVICE ONLY</span></div>
@@ -320,8 +320,8 @@
 
   <div class="card">
     <div class="card-title">🔑 Signed-In Users (Google Account) <span class="badge badge-blue">SYNCED TO CLOUD</span></div>
+    <p style="margin-bottom: 10px; font-size: 14px; color: #b0b0cc;">When you sign in using your Google account, we collect and store your name, email address, and a unique Firebase user ID to identify your account and sync your data across devices.</p>
     <ul>
-      <li>Your Google Account display name and anonymous Firebase UID</li>
       <li>Focus session records (start time, duration, completion status)</li>
       <li>Streak count and best streak</li>
       <li>Total sessions completed and total focus minutes</li>
@@ -330,23 +330,25 @@
       <li>Premium status and trial expiry timestamp</li>
       <li>Migration flags (internal — whether guest data has been transferred to your account)</li>
     </ul>
-    <p style="margin-top:10px; font-size:14px; color:#6666aa;">Your data is stored in Google Firebase Firestore and is associated with a Firebase UID. While your Google account is used for authentication, your focus data is stored separately and is not publicly linked to your identity.</p>
+    <p style="margin-top:10px; font-size:14px; color:#6666aa;">Your data is stored in Google Firebase Firestore and is associated with a Firebase UID. Your data is stored securely on Google Cloud servers via Firebase services. Access to your data is restricted and protected using Firebase security rules. Your focus data is stored securely and is not publicly accessible.</p>
   </div>
 
   <h2>3. How We Use Your Data</h2>
-  <p>Your data is used to:</p>
+  <p>We use the collected data to:</p>
   <ul>
-    <li>Track your focus sessions and progress</li>
-    <li>Sync your data across devices</li>
-    <li>Improve app performance and user experience</li>
-    <li>Provide features such as streak tracking and statistics</li>
+    <li>Provide and maintain app functionality, including tracking your focus sessions and progress.</li>
+    <li>Sync your data across devices when you are signed in.</li>
+    <li>Manage your account and authentication.</li>
+    <li>Process purchases and manage premium features.</li>
+    <li>Improve app performance, stability, and user experience.</li>
+    <li>Provide features such as streak tracking and statistics.</li>
   </ul>
 
   <h2>4. How We Use the Accessibility Service</h2>
   <div class="warning-box">
     ⚠️ FocusPort uses Android's Accessibility Service <strong>only</strong> to detect when you leave the app during an active focus session, and to help enforce your focus session by restricting distractions — a session you have personally configured and started.
   </div>
-  <p>The Accessibility Service is used strictly for this single purpose. It does not read text from your screen, interact with other apps on your behalf, collect or store any data from other apps, or operate when no focus session is active. You can revoke this permission at any time via Android Settings → Accessibility.</p>
+  <p>The Accessibility Service is used strictly for this core functionality of enforcing focus sessions. It does not read text from your screen, interact with other apps on your behalf, collect or store any data from other apps, or operate when no focus session is active. You can revoke this permission at any time via Android Settings → Accessibility.</p>
 
   <h2>5. How We Use Device Administrator</h2>
   <p>FocusPort requests Device Administrator permission solely to lock the screen during active focus sessions initiated by the user. It is not used to wipe your device, enforce password policies, monitor device usage, or perform any action outside of an active, user-initiated focus session.</p>
@@ -357,21 +359,14 @@
     <li>Your first Exit Key is granted free after completing your first focus session</li>
     <li>Additional keys are available for purchase via Google Play Billing</li>
     <li>Your key balance is stored in Firebase (signed-in) or locally (guest)</li>
-    <li>Purchase transactions are handled entirely by Google Play — All payments are processed by Google Play. We do not collect or store any payment information.</li>
   </ul>
+  <div class="info-box">
+    <strong>💳 Payment Processing:</strong> All payments are processed securely through Google Play. FocusPort does not collect, store, or have access to your payment details such as credit card, debit card, or bank account information. Purchase transactions are handled entirely by Google Play.
+  </div>
 
-  <h2>7. Data Storage and Security</h2>
-  <p>Your data is stored securely using Firebase (Google Cloud services). We take reasonable measures to protect your data, but no method of transmission over the internet is 100% secure. We do not sell or share your personal data with third parties.</p>
-  <p>In the unlikely event of a data breach, we will take appropriate steps to notify affected users as required by applicable laws.</p>
-  <p>Your data may be processed and stored on servers located outside your country, including by Google Cloud services.</p>
-
-  <h2>8. Third-Party Services</h2>
-  <p>The app uses third-party services that may collect information used to identify you. These include:</p>
-  <ul>
-    <li>Google Sign-In (for authentication)</li>
-    <li>Firebase (Firestore, Authentication)</li>
-  </ul>
-  <p>These services may collect data such as your email address, usage data, and device information in accordance with their own privacy policies.</p>
+  <h2>7. Data Sharing and Third-Party Services</h2>
+  <p>We do not sell your personal data. We use trusted service providers such as Google Firebase (for authentication and data storage) and Google Play (for payment processing), which process data on our behalf to provide core app functionality.</p>
+  <p>These services process data on our behalf to provide core functionality such as authentication, cloud data storage, analytics, and payment processing. They may handle data such as your email address, usage data, and device information in accordance with their own privacy policies.</p>
 
   <div class="card">
     <div class="card-title">Google Firebase (Firestore &amp; Authentication)</div>
@@ -379,18 +374,24 @@
   </div>
   <div class="card">
     <div class="card-title">Google Play Billing</div>
-    <p style="font-size:14px; color:#8888aa; margin:0;">Used to process Exit Key purchases. Governed by the <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice" target="_blank">Google Payments Privacy Notice</a>.</p>
+    <p style="font-size:14px; color:#8888aa; margin:0;">Used to process Exit Key and premium purchases. Governed by the <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice" target="_blank">Google Payments Privacy Notice</a>.</p>
   </div>
 
+  <h2>8. Data Storage and Security</h2>
+  <p>Your data is stored securely using Firebase (Google Cloud services). We take reasonable measures to protect your data using secure technologies provided by Firebase and Google services. However, no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
+  <p>In the unlikely event of a data breach, we will take appropriate steps to notify affected users as required by applicable laws. Your data may be processed and stored on servers located outside your country.</p>
+
   <h2>9. Data Retention</h2>
-  <p>We retain your data as long as your account is active. If you stop using the app or request deletion, your data will be removed within a reasonable time.</p>
+  <p>We retain your data for as long as your account is active or as needed to provide the app's functionality. If you stop using the app or request deletion, your data will be removed from our systems within a reasonable timeframe.</p>
   <div class="info-box">
     <strong>ℹ️ How to delete your data:</strong> Currently, FocusPort does not provide an in-app data deletion option. You may request deletion by contacting us at the email below. We will process valid requests within a reasonable timeframe.
   </div>
-  <p>You may also delete your data by signing out and clearing app data from your device. For complete account deletion from our servers, please contact us.</p>
-  <p>If you sign in with Google, uninstalling the app does not automatically delete your cloud data. You must contact us to request full deletion from our servers.</p>
+  <p>You may also delete local data by signing out and clearing app data from your device. For complete account deletion from our servers, please contact us. If you sign in with Google, uninstalling the app does not automatically delete your cloud data.</p>
 
-  <h2>10. Your Rights</h2>
+  <h2>10. Children's Privacy</h2>
+  <p>FocusPort is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that a child under 13 has provided us with personal data, we will take steps to delete such information.</p>
+
+  <h2>11. Your Rights</h2>
   <p>You have the right to:</p>
   <ul>
     <li>Access your data</li>
@@ -399,14 +400,11 @@
   </ul>
   <p>For any privacy-related inquiries, please contact us at <a href="mailto:focusport.support@gmail.com">focusport.support@gmail.com</a>.</p>
 
-  <h2>11. Children’s Privacy</h2>
-  <p>This app is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13.</p>
-
   <h2>12. Changes to This Privacy Policy</h2>
-  <p>We may update this policy from time to time. Any changes will be posted on this page.</p>
+  <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated effective date. We encourage you to review this policy periodically.</p>
 
   <h2>13. Consent</h2>
-  <p>By using this app, you agree to this privacy policy.</p>
+  <p>By using this app, you agree to this privacy policy and the collection and use of information in accordance with it.</p>
 
   <div class="contact-box">
     <p class="label">Contact &amp; Data Requests</p>
@@ -449,6 +447,9 @@
     <p style="font-size:14px; color:#8888aa; margin:0;">Additional Exit Keys are available for purchase through Google Play. All purchases are final and non-refundable once a key has been consumed. Unused keys may be eligible for a refund through Google Play's standard refund policy within 48 hours of purchase.</p>
   </div>
   <p>Exit Keys are consumable items. They are not transferable between accounts and their value cannot be redeemed for cash. We reserve the right to adjust pricing at any time; previously purchased keys are not affected.</p>
+  <div class="info-box">
+    <strong>💳 Payment Security:</strong> All payments are processed securely through Google Play. FocusPort does not collect, store, or have access to your payment details such as credit card or bank account information.
+  </div>
 
   <h2>5. Premium Features</h2>
   <p>Certain features are available only to Premium subscribers, including additional schedule slots and emergency app slots. Premium status is obtained through in-app purchase via Google Play Billing. We will provide notice of any material reductions to premium features.</p>
